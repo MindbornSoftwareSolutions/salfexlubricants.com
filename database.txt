@@ -1,0 +1,43 @@
+create table category
+(
+	categoryid int primary key identity(1,1),
+	name nvarchar(200),
+	parentid int
+)
+
+create table item
+(
+	itemid int primary key identity(1,1),
+	categoryid int,
+	name nvarchar(200),
+	subname nvarchar(200),
+	descriptionjson varchar(4000)
+)
+
+create table itempackagingsize
+(
+	id int primary key identity(1,1),
+	itemid int,
+	packagingsize nvarchar(200),
+	rate float
+)
+
+create table orders
+(
+	orderid int primary key identity(1,1),
+	datetime datetime,
+	cust_name nvarchar(200),
+	cust_contact varchar(20),
+	cust_email varchar(255),
+	status nvarchar(200)
+)
+
+create table orderitem
+{
+	id int primary key identity(1,1),
+	orderid int,
+	itemid int,
+	packagingsize varchar(200),
+	rate float,
+	qty int
+}
