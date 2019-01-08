@@ -128,6 +128,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="css\style.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -139,6 +140,35 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Images\20W40_4StrokeMotorCycleEngineOil.png" />
+    <Content Include="Images\bedroom.jpg" />
+    <Content Include="Images\bg-body.png" />
+    <Content Include="Images\bg-box.png" />
+    <Content Include="Images\bg-contents.png" />
+    <Content Include="Images\bg-pattern.jpg" />
+    <Content Include="Images\bg-sidebar.png" />
+    <Content Include="Images\bg-time.png" />
+    <Content Include="Images\buttons.png" />
+    <Content Include="Images\carving-master.jpg" />
+    <Content Include="Images\carving-small.png" />
+    <Content Include="Images\chair-small.png" />
+    <Content Include="Images\chair.jpg" />
+    <Content Include="Images\frames.png" />
+    <Content Include="Images\home.png" />
+    <Content Include="Images\icons.png" />
+    <Content Include="Images\kitchen.jpg" />
+    <Content Include="Images\living-room.jpg" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\resort-small.png" />
+    <Content Include="Images\resort.png" />
+    <Content Include="Images\separator-dark-vertical.png" />
+    <Content Include="Images\separator-dark.png" />
+    <Content Include="Images\separator-light-vertical.png" />
+    <Content Include="Images\separator-light.png" />
+    <Content Include="Images\show-room.png" />
+    <Content Include="Images\sofa.jpg" />
+    <Content Include="Images\wood-floor.jpg" />
+    <Content Include="index.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -190,6 +220,7 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DBManager.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -224,7 +255,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="App_Data\Images\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

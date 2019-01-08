@@ -16,7 +16,7 @@ create table item
 
 create table itempackagingsize
 (
-	id int primary key identity(1,1),
+	packagingsizeid int primary key identity(1,1),
 	itemid int,
 	packagingsize nvarchar(200),
 	rate float
@@ -33,11 +33,20 @@ create table orders
 )
 
 create table orderitem
-{
-	id int primary key identity(1,1),
+)
+	orderitemid int primary key identity(1,1),
 	orderid int,
 	itemid int,
 	packagingsize varchar(200),
 	rate float,
 	qty int
-}
+)
+
+create table shoppingcart
+(
+	shoppingcartid int primary key identity(1,1),
+	userid int,
+	itemid int,
+	packagingsize varchar(200),
+	qty int
+)
