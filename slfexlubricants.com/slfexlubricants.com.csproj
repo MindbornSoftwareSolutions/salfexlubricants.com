@@ -168,7 +168,7 @@
     <Content Include="Images\show-room.png" />
     <Content Include="Images\sofa.jpg" />
     <Content Include="Images\wood-floor.jpg" />
-    <Content Include="index.html" />
+    <Content Include="index.bak.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

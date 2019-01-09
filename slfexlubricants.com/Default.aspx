@@ -2,41 +2,67 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <%--    <div class="jumbotron">
+        <h1>Salfex Lubricants</h1>
+        <div class="row">
+            <img src="Images/home.png" style="width: 100%" />
+        </div>
+    </div>--%>
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" style="max-height: 400px; width: 100%">
+            <div class="item active">
+                <img src="images/home.png" alt="Salfex Lubricants" style="max-height: 100%; max-width: 100%">
+            </div>
+
+            <div class="item">
+                <img src="images/20W40_4StrokeMotorCycleEngineOil.png" alt="Chicago" style="max-height: 100% !important; max-width: 100% !important">
+            </div>
+
+            <div class="item">
+                <img src="images/20W40_4StrokeMotorCycleEngineOil.png" alt="New York" style="max-height: 100%; max-width: 100%">
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
 
     <div class="row">
         <div class="col-md-4">
-            <h2>Getting started</h2>
+            <h2><span style="background-color: #b01313; color: #ffffff; padding: 2px 10px 2px 10px; border-radius: 10px">20W40</span> 4 Stroke Motor Cycle Engine Oil</h2>
             <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
+                Salfex Advanced 4T 20W/40+ is a blend of Mineral and Synthetic base Stock and Blend of Selective high performance Additives, which protects Engine, Transmission and wet clutch of new generation 4-Stroke two wheelers.
             </p>
         </div>
         <div class="col-md-4">
-            <h2>Get more libraries</h2>
+            <h2><span style="background-color: #b01313; color: #ffffff; padding: 2px 10px 2px 10px; border-radius: 10px">20W40</span> 4 Stroke Motor Cycle Engine Oil</h2>
             <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
+                Salfex Advanced 4T 20W/40+ is a blend of Mineral and Synthetic base Stock and Blend of Selective high performance Additives, which protects Engine, Transmission and wet clutch of new generation 4-Stroke two wheelers.
             </p>
         </div>
         <div class="col-md-4">
-            <h2>Web Hosting</h2>
+            <h2><span style="background-color: #b01313; color: #ffffff; padding: 2px 10px 2px 10px; border-radius: 10px">20W40</span> 4 Stroke Motor Cycle Engine Oil</h2>
             <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
+                Salfex Advanced 4T 20W/40+ is a blend of Mineral and Synthetic base Stock and Blend of Selective high performance Additives, which protects Engine, Transmission and wet clutch of new generation 4-Stroke two wheelers.
             </p>
         </div>
     </div>
+    <div class="row"><a class="btn" style="background-color: #b01313; color: white" href="products">View More Products...</a></div>
 
 </asp:Content>

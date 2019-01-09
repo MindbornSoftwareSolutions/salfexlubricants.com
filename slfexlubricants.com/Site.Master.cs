@@ -11,7 +11,13 @@ namespace slfexlubricants.com
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            List<object[]> cart = Session["cart"] as List<object[]>;
+            if(cart==null)
+            {
+                cart = new List<object[]>();
+                Session["cart"] = cart;
+            }
+            label_cartitems.Text = "(" + cart.Count + ")";
         }
     }
 }
