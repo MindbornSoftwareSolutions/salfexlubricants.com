@@ -39,9 +39,9 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #d38b1a; color: white">
+        <div class="navbar navbar-inverse " style="background-color: #d38b1a; color: white">
             <div class="container">
-                <img style="height: 60px" src="images/logo.png" alt="Salfex Lubricants"/>
+                <img style="height: 60px" src="images/logo.png" alt="Salfex Lubricants" />
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
@@ -53,10 +53,12 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/" style="color: white">Home</a></li>
-                        <li><a runat="server" href="~/" style="color: white">Products</a></li>
+                        <li><a runat="server" href="~/BrowseProducts" style="color: white">Products</a></li>
                         <li><a runat="server" href="~/About" style="color: white">About</a></li>
                         <li><a runat="server" href="~/Contact" style="color: white">Contact</a></li>
-                        <li><a runat="server" href="~/Contact" style="color: white">Shopping Cart <span class="glyphicon glyphicon-shopping-cart"></span> <asp:Label Text="(0)" ID="label_cartitems" runat="server" /> </a></li>
+                        <li><a runat="server" href="~/Cart" style="color: white">Shopping Cart <span class="glyphicon glyphicon-shopping-cart"></span>
+                            <asp:Label Text="(0)" ID="label_cartitems" runat="server" />
+                        </a></li>
                     </ul>
                 </div>
             </div>

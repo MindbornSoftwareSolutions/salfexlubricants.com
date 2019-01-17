@@ -33,7 +33,7 @@ create table orders
 )
 
 create table orderitem
-)
+(
 	orderitemid int primary key identity(1,1),
 	orderid int,
 	itemid int,
