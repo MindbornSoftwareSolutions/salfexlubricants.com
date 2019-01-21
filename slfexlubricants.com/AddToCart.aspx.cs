@@ -24,6 +24,9 @@ namespace slfexlubricants.com
                 DataTable item = DBManager.ExecuteQuery("select * from item where itemid=" + id);
                 DataRow row = item.Rows[0];
                 cart.Add(new Object[] { row["itemid"], row["name"], row["subname"],row["descriptionjson"],1 });
+
+                Response.Write("<script>alert('Item Added to Cart');</script>");
+
             }
             catch(Exception)
             {

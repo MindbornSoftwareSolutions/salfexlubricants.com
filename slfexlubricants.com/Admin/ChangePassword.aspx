@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true"
-	CodeBehind="ChangePassword.aspx.cs" Inherits="OVSWeb.Admin.ChangePassword" %>
+	CodeBehind="ChangePassword.aspx.cs" Inherits="Admin.ChangePassword" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

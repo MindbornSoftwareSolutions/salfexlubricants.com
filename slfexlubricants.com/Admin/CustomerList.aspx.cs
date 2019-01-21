@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
-using OVSWeb.Code;
+using slfexlubricants.com;
 
-namespace OVSWeb.Admin
+namespace Admin
 {
 	public partial class CustomerList : System.Web.UI.Page
 	{

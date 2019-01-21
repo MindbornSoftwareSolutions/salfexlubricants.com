@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using OVSWeb.Code;
+using slfexlubricants.com;
 
-namespace OVSWeb.Admin
+namespace Admin
 {
 	public partial class ChangePassword : System.Web.UI.Page
 	{
@@ -16,9 +16,9 @@ namespace OVSWeb.Admin
 
 		protected void Unnamed1_Click(object sender, EventArgs e)
 		{
-			String current = tb_currentpassword.Text;
-			String np = tb_newpassword.Text;
-			String cp = tb_confirmpassword.Text;
+			String current = tb_currentpassword.Text.Replace("'","''");
+            String np = tb_newpassword.Text.Replace("'", "''");
+            String cp = tb_confirmpassword.Text.Replace("'", "''");
 
 			if (np != cp)
 			{
@@ -27,7 +27,7 @@ namespace OVSWeb.Admin
 				return;
 			}
 
-			int res = DBManager.ExecuteNonQuery("update admin set password=@password where username='admin' and password=@currentpassword", "@password", np, "@currentpassword", current);
+			int res = DBManager.ExecuteNonQuery("update admin set password='"+np+"' where username='admin' and password='"+cp+"'");
 			if (res == 0)
 			{
 				message.Text = "Incorrect password";

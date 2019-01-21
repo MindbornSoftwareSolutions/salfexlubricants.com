@@ -1,1 +1,1 @@
-﻿<%@ WebHandler Language="C#" CodeBehind="UpdateRates.ashx.cs" Class="OVSWeb.Admin.UpdateRates1" %>
+﻿<%@ WebHandler Language="C#" CodeBehind="UpdateRates.ashx.cs" Class="Admin.UpdateRates1" %>

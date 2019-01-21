@@ -4,9 +4,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
-using OVSWeb.Code;
+using slfexlubricants.com;
 
-namespace OVSWeb.Admin
+namespace Admin
 {
 	public partial class ManageOrders : System.Web.UI.Page
 	{
@@ -21,7 +21,7 @@ namespace OVSWeb.Admin
 		private void LoadOrders()
 		{
 			String status = dd_orderstatus.Text;
-			DataTable table = DBManager.ExecuteQuery("select * from orders,customer where orders.custid=customer.custid and orders.status=@status order by datetime desc","@status",status);
+			DataTable table = DBManager.ExecuteQuery("select * from orders,customer where orders.custid=customer.custid and orders.status="+status+"' order by datetime desc");
 			//Repeater1.DataSource = table;
 			//Repeater1.DataBind();
 
@@ -33,29 +33,29 @@ namespace OVSWeb.Admin
 		{
 			int rowIndex = Convert.ToInt32(e.CommandArgument);
 			int id = Convert.ToInt32(GridView1.DataKeys[rowIndex].Values[0]);
-			int custid = Convert.ToInt32(DBManager.ExecuteScalar("select custid from orders where oid=@id", "@id", id));
-			String contact=Convert.ToString(DBManager.ExecuteScalar("select contact from customer where custid=@custid","@custid",custid));
+			int custid = Convert.ToInt32(DBManager.ExecuteScalar("select custid from orders where oid="+ id));
+			String contact=Convert.ToString(DBManager.ExecuteScalar("select contact from customer where custid="+custid));
 
 			switch (e.CommandName)
 			{
 				case "Accept":
-					DBManager.ExecuteNonQuery("update orders set status='Accepted' where oid=@id", "@id", id);
-					Util.SendSMS(contact,"Your order no "+id+" is Accepted");
+					DBManager.ExecuteNonQuery("update orders set status='Accepted' where oid="+ id);
+					//Util.SendSMS(contact,"Your order no "+id+" is Accepted");
 					break;
 				case "Dispatch":
-					DBManager.ExecuteNonQuery("update orders set status='Dispatched' where oid=@id", "@id", id);
-					Util.SendSMS(contact,"Your order no "+id+" is Dispatched");
+					DBManager.ExecuteNonQuery("update orders set status='Dispatched' where oid="+ id);
+					//Util.SendSMS(contact,"Your order no "+id+" is Dispatched");
 					break;
 				case "Delivered":
-					DBManager.ExecuteNonQuery("update orders set status='Delivered' where oid=@id", "@id", id);
-					Util.SendSMS(contact,"Your order no "+id+" is Delivered");
+					DBManager.ExecuteNonQuery("update orders set status='Delivered' where oid="+ id);
+					//Util.SendSMS(contact,"Your order no "+id+" is Delivered");
 					break;
 				case "Reject":
-					DBManager.ExecuteNonQuery("update orders set status='Rejected' where oid=@id", "@id", id);
-					Util.SendSMS(contact,"Your order no "+id+" is Rejected. Contact customer care.");
+					DBManager.ExecuteNonQuery("update orders set status='Rejected' where oid="+ id);
+					//Util.SendSMS(contact,"Your order no "+id+" is Rejected. Contact customer care.");
 					break;
 				case "Remove":
-					DBManager.ExecuteNonQuery("delete from orders where oid=@id", "@id", id);
+					DBManager.ExecuteNonQuery("delete from orders where oid="+ id);
 					break;
 			}
 			LoadOrders();

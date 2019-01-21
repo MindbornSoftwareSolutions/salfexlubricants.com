@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OVSWeb.Admin
+namespace Admin
 {
 
 

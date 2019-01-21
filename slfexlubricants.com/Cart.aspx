@@ -23,7 +23,8 @@
                         </asp:DropDownList>
                         <br />
                         <br />
-                        <a href="/RemoveFromCart.aspx?id=<%# ((Object[])Container.DataItem)[0] %>" class="btn btn-danger">&times; Remove From Cart</a>
+                        <%--<a href="/RemoveFromCart.aspx?id=<%# ((Object[])Container.DataItem)[0] %>" class="btn btn-danger">&times; Remove From Cart</a>--%>
+                        <a href="/RemoveFromCart.aspx?id=<%# Container.ItemIndex %>" class="btn btn-danger">&times; Remove From Cart</a>
                     </div>
                 </div>
             </ItemTemplate>
@@ -31,25 +32,26 @@
     </div>
 
     <div style="background-color: #ffffff; margin: 15px; padding: 5px; border: 1px solid black; border-radius: 10px; box-shadow: 10px 10px 8px #aaaaaa">
-        <h5>Contact Information</h5>
+        <h4>Choose Delivery Address</h4>
 
         <div class="input-group mb-3">
-            Name <input type="text" class="form-control" placeholder="Name" aria-label="name" aria-describedby="basic-addon1"/>
+            Name <asp:TextBox runat="server" ID="tb_name" CssClass="input-group"/>
         </div>
 
         <div class="input-group mb-3">
-            Address <textarea class="form-control" placeholder="Address" aria-label="name" aria-describedby="basic-addon1"></textarea>
+            Address <asp:TextBox runat="server" ID="tb_address" CssClass="input-group" TextMode="MultiLine" Rows="5" Columns="50" />
         </div>
 
         <div class="input-group mb-3">
-            Contact<input type="text" class="form-control" placeholder="Contact" aria-label="name" aria-describedby="basic-addon1"/>
+            Contact <asp:TextBox runat="server" CssClass="input-group" ID="tb_contact" TextMode="Phone" />
         </div>
 
         <div class="input-group mb-3">
-            Email<input type="text" class="form-control" placeholder="Email" aria-label="name" aria-describedby="basic-addon1"/>
+            Email<asp:TextBox runat="server" CssClass="input-group" ID="tb_email" TextMode="Email"/>
         </div>
 
         <button class="btn btn-success">Place Order</button>
+        <a href="BrowseProducts">Continue Shopping</a>
     </div>
 
 </asp:Content>

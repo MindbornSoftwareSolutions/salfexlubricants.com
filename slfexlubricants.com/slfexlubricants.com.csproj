@@ -123,13 +123,13 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AddToCart.aspx" />
+    <Content Include="Admin\AddCategory.aspx" />
     <Content Include="Admin\AddItem.aspx" />
     <Content Include="Admin\AdminHome.aspx" />
     <Content Include="Admin\Categories.aspx" />
     <Content Include="Admin\ChangePassword.aspx" />
     <Content Include="Admin\CustomerList.aspx" />
     <Content Include="Admin\EditItem.aspx" />
-    <Content Include="Admin\ListDiscountSchedule.aspx" />
     <Content Include="Admin\ListItem.aspx" />
     <Content Include="Admin\Login.aspx" />
     <Content Include="Admin\ManageOrders.aspx" />
@@ -153,6 +153,7 @@
     </Content>
     <Content Include="Admin\UpdateRates.ashx" />
     <Content Include="Admin\Web.config" />
+    <Content Include="Main.Master" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Images\1.jpg" />
     <Content Include="Images\20W40_4StrokeMotorCycleEngineOil.png" />
@@ -184,6 +185,7 @@
     <Content Include="Images\sofa.jpg" />
     <Content Include="Images\wood-floor.jpg" />
     <Content Include="index.bak.html" />
+    <Content Include="RemoveFromCart.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -213,10 +215,8 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
-    <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
-    <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddToCart.aspx.cs">
@@ -226,62 +226,72 @@
     <Compile Include="AddToCart.aspx.designer.cs">
       <DependentUpon>AddToCart.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AddCategory.aspx.cs">
+      <DependentUpon>AddCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddCategory.aspx.designer.cs">
+      <DependentUpon>AddCategory.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AddItem.aspx.cs">
       <DependentUpon>AddItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\AddItem.aspx.designer.cs">
       <DependentUpon>AddItem.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\AdminHome.aspx.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\AdminHome.aspx.designer.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Categories.aspx.cs">
       <DependentUpon>Categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\Categories.aspx.designer.cs">
       <DependentUpon>Categories.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\CustomerList.aspx.cs">
       <DependentUpon>CustomerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\CustomerList.aspx.designer.cs">
       <DependentUpon>CustomerList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\EditItem.aspx.cs">
       <DependentUpon>EditItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\EditItem.aspx.designer.cs">
       <DependentUpon>EditItem.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\ListDiscountSchedule.aspx.cs">
-      <DependentUpon>ListDiscountSchedule.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\ListDiscountSchedule.aspx.designer.cs">
-      <DependentUpon>ListDiscountSchedule.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\ListItem.aspx.cs">
       <DependentUpon>ListItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\ListItem.aspx.designer.cs">
       <DependentUpon>ListItem.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ManageOrders.aspx.cs">
       <DependentUpon>ManageOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\ManageOrders.aspx.designer.cs">
       <DependentUpon>ManageOrders.aspx</DependentUpon>
@@ -291,6 +301,7 @@
     </Compile>
     <Compile Include="Admin\UpdateRates.aspx.cs">
       <DependentUpon>UpdateRates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\UpdateRates.aspx.designer.cs">
       <DependentUpon>UpdateRates.aspx</DependentUpon>
@@ -336,27 +347,27 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoveFromCart.aspx.cs">
+      <DependentUpon>RemoveFromCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RemoveFromCart.aspx.designer.cs">
+      <DependentUpon>RemoveFromCart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.designer.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-    </Compile>
-    <Compile Include="ViewSwitcher.ascx.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ViewSwitcher.ascx.designer.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

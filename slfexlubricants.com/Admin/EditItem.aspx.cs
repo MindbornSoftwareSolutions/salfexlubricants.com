@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using OVSWeb.Code;
+using slfexlubricants.com;
 using System.Data;
 
-namespace OVSWeb.Admin
+namespace Admin
 {
 	public partial class EditItem : System.Web.UI.Page
 	{
@@ -22,7 +22,7 @@ namespace OVSWeb.Admin
 				}
 				int iid = Convert.ToInt32(iidstr);
 
-				DataTable dt = DBManager.ExecuteQuery("select * from item where iid=@iid", "@iid", iid);
+				DataTable dt = DBManager.ExecuteQuery("select * from item where itemid="+ iid);
 				if (dt.Rows.Count == 0)
 				{
 					Response.Redirect("/Admin/Login.aspx");
@@ -30,13 +30,20 @@ namespace OVSWeb.Admin
 				}
 
 				DataRow item = dt.Rows[0];
-				int cid = Convert.ToInt32(item["cid"]);
+				int cid = Convert.ToInt32(item["categoryid"]);
 				Cache["cid"] = cid;
-				dd_category.SelectedIndex = cid - 1;
+
+                DataTable table = DBManager.ExecuteQuery("select * from category");
+                dd_category.DataSource = table;
+                dd_category.DataTextField = "name";
+                dd_category.DataValueField = "categoryid";
+                dd_category.SelectedValue = cid.ToString();
+                dd_category.DataBind();
+
 				tb_name.Text = Convert.ToString(item["name"]);
-				tb_altname.Text = Convert.ToString(item["altname"]);
-				tb_rates.Text = Convert.ToString(item["rates"]);
-				tb_description.Text = Convert.ToString(item["description"]);
+				tb_altname.Text = Convert.ToString(item["subname"]);
+				tb_rates.Text = Convert.ToString(item["rate"]);
+				tb_description.Text = Convert.ToString(item["descriptionjson"]);
 			}
 		}
 
@@ -59,15 +66,15 @@ namespace OVSWeb.Admin
 
 
 			//long iid=DBManager.ExecuteInsert("insert into item values (@cid,@name,@altname,@description,@imageurl,@rates,1)", "@cid", cid, "@name", name, "@altname", altname, "@description", description, "@imageurl", imageurl,"@rates",rates);
-			DBManager.ExecuteNonQuery("update item set cid=@cid, name=@name, altname=@altname, description=@description, rates=@rates where iid=@iid", "@cid", cid, "@name", name, "@altname", altname, "@description", description, "@rates", rates, "@iid",iid);
+			DBManager.ExecuteNonQuery("update item set categoryid=@cid, name=@name, subname=@altname, descriptionjson=@description, rate=@rates where itemid=@iid", "@cid", cid, "@name", name, "@altname", altname, "@description", description, "@rates", rates, "@iid",iid);
 
 
 			if (FileUpload1.HasFile)
 			{
-				imageurl = Convert.ToString(iid);
-				String imageurl2 = Server.MapPath("/Images/Items/" + imageurl);
+				imageurl = Convert.ToString(iid)+".jpg";
+				String imageurl2 = Server.MapPath("/Images/" + imageurl);
 				FileUpload1.SaveAs(imageurl2);
-				DBManager.ExecuteNonQuery("update item set imageurl=@imageurl where iid=@iid", "@imageurl", imageurl, "@iid", iid);
+				DBManager.ExecuteNonQuery("update item set imageurl=@imageurl where itemid=@iid", "@imageurl", imageurl, "@iid", iid);
 			}
 			Response.Redirect("/Admin/ListItem.aspx?cid=" + Cache["cid"]);
 		}

@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true"
-	CodeBehind="UpdateRates.aspx.cs" Inherits="OVSWeb.Admin.UpdateRates" %>
+	CodeBehind="UpdateRates.aspx.cs" Inherits="Admin.UpdateRates" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

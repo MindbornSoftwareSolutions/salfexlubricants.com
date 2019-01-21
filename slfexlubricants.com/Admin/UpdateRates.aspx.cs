@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using OVSWeb.Code;
+using slfexlubricants.com;
 using System.Data;
 using System.Text;
 
-namespace OVSWeb.Admin
+namespace Admin
 {
 	public partial class UpdateRates : System.Web.UI.Page
 	{

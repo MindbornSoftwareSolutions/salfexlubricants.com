@@ -1,10 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true"
-	CodeBehind="AddItem.aspx.cs" Inherits="OVSWeb.Admin.AddItem" %>
+	CodeBehind="AddItem.aspx.cs" Inherits="Admin.AddItem" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-	<table border="0" cellpadding="0" cellspacing="0">
+	<table border="0" cellpadding="0" cellspacing="0" class="table">
 		<tr>
 			<td>
 				Name
@@ -15,7 +15,7 @@
 		</tr>
 		<tr>
 			<td>
-				Altername Name
+				Sub Name
 			</td>
 			<td>
 				<asp:TextBox runat="server" ID="tb_altname" />
@@ -31,11 +31,10 @@
 		</tr>
 		<tr>
 			<td>
-				Rates
+				Rate
 			</td>
 			<td>
-				<asp:TextBox runat="server" ID="tb_rates" TextMode="MultiLine" />
-				e.g. 250gm=20
+				<asp:TextBox runat="server" ID="tb_rates" />
 			</td>
 		</tr>
 		<tr>

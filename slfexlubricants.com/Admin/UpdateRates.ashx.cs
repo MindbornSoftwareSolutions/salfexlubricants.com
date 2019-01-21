@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web;
-using OVSWeb.Code;
 using System.Text;
 
-namespace OVSWeb.Admin
+namespace Admin
 {
 	/// <summary>
 	/// Summary description for UpdateRates1

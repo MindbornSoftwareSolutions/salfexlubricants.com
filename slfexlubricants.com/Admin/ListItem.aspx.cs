@@ -4,9 +4,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
-using OVSWeb.Code;
+using slfexlubricants.com;
 
-namespace OVSWeb.Admin
+namespace Admin
 {
 	public partial class ListItem : System.Web.UI.Page
 	{
@@ -22,7 +22,7 @@ namespace OVSWeb.Admin
 					return;
 				}
 				int cid = Convert.ToInt32(cidstr);
-				String category = Convert.ToString(DBManager.ExecuteScalar("select name from category where cid=@cid", "@cid", cid));
+				String category = Convert.ToString(DBManager.ExecuteScalar("select name from category where categoryid="+ cid));
 				l_category.Text = category;
 			}
 		}
@@ -36,7 +36,7 @@ namespace OVSWeb.Admin
 				return;
 			}
 			int cid = Convert.ToInt32(cidstr);
-			DataTable dt = DBManager.ExecuteQuery("select * from item where cid=@cid and status=1", "@cid", cid);
+			DataTable dt = DBManager.ExecuteQuery("select * from item where categoryid="+cid);
 			Repeater1.DataSource = dt.DefaultView;
 			Repeater1.DataBind();
 		}
@@ -63,7 +63,7 @@ namespace OVSWeb.Admin
 			else if(e.CommandName.Equals("RemoveItem"))
 			{
 				int iid = Convert.ToInt32(e.CommandArgument);
-				DBManager.ExecuteNonQuery("delete from item where iid=@iid", "@iid", iid);
+				DBManager.ExecuteNonQuery("delete from item where itemid=@iid", "@iid", iid);
 				LoadItems();
 			}
 		}

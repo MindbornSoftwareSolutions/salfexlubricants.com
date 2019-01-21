@@ -4,7 +4,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace OVSWeb.Admin
+namespace Admin
 {
 	public partial class AdminHome : System.Web.UI.Page
 	{

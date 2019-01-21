@@ -4,7 +4,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Security;
-using OVSWeb.Code;
+using slfexlubricants.com;
 
 namespace OVSWeb
 {
@@ -20,11 +20,14 @@ namespace OVSWeb
 			String username = this.username.Text.Trim();
 			String password = this.password.Text;
 
-			Dictionary<string, object> map = new Dictionary<string, object>();
-			map["@username"] = username;
-			map["@password"] = password;
+            username = username.Replace("'", "''");
+            password = password.Replace("'", "''");
 
-			int count = Convert.ToInt32(DBManager.ExecuteScalar("select count(*) from admin where username=@username and password=@password", map));
+			Dictionary<string, object> map = new Dictionary<string, object>();
+            //map["@username"] = username;
+            //map["@password"] = password;
+
+			int count = Convert.ToInt32(DBManager.ExecuteScalar("select count(*) from admin where username='"+username+"' and password='"+password+"'"));
 
 			if (count == 0)
 			{
