@@ -123,6 +123,17 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AddToCart.aspx" />
+    <Content Include="Admin\AddItem.aspx" />
+    <Content Include="Admin\AdminHome.aspx" />
+    <Content Include="Admin\Categories.aspx" />
+    <Content Include="Admin\ChangePassword.aspx" />
+    <Content Include="Admin\CustomerList.aspx" />
+    <Content Include="Admin\EditItem.aspx" />
+    <Content Include="Admin\ListDiscountSchedule.aspx" />
+    <Content Include="Admin\ListItem.aspx" />
+    <Content Include="Admin\Login.aspx" />
+    <Content Include="Admin\ManageOrders.aspx" />
+    <Content Include="Admin\UpdateRates.aspx" />
     <Content Include="BrowseProducts.aspx" />
     <Content Include="Cart.aspx" />
     <Content Include="Contact.aspx" />
@@ -140,6 +151,8 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Admin\UpdateRates.ashx" />
+    <Content Include="Admin\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Images\1.jpg" />
     <Content Include="Images\20W40_4StrokeMotorCycleEngineOil.png" />
@@ -212,6 +225,75 @@
     </Compile>
     <Compile Include="AddToCart.aspx.designer.cs">
       <DependentUpon>AddToCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddItem.aspx.cs">
+      <DependentUpon>AddItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddItem.aspx.designer.cs">
+      <DependentUpon>AddItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminHome.aspx.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminHome.aspx.designer.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Categories.aspx.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Categories.aspx.designer.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CustomerList.aspx.cs">
+      <DependentUpon>CustomerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CustomerList.aspx.designer.cs">
+      <DependentUpon>CustomerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditItem.aspx.cs">
+      <DependentUpon>EditItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditItem.aspx.designer.cs">
+      <DependentUpon>EditItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ListDiscountSchedule.aspx.cs">
+      <DependentUpon>ListDiscountSchedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ListDiscountSchedule.aspx.designer.cs">
+      <DependentUpon>ListDiscountSchedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ListItem.aspx.cs">
+      <DependentUpon>ListItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ListItem.aspx.designer.cs">
+      <DependentUpon>ListItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageOrders.aspx.cs">
+      <DependentUpon>ManageOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageOrders.aspx.designer.cs">
+      <DependentUpon>ManageOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UpdateRates.ashx.cs">
+      <DependentUpon>UpdateRates.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UpdateRates.aspx.cs">
+      <DependentUpon>UpdateRates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UpdateRates.aspx.designer.cs">
+      <DependentUpon>UpdateRates.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
