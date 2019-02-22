@@ -154,6 +154,7 @@
     <Content Include="Admin\UpdateRates.ashx" />
     <Content Include="Admin\Web.config" />
     <Content Include="Main.Master" />
+    <None Include="Properties\PublishProfiles\local.pubxml" />
     <None Include="Properties\PublishProfiles\Mindborn.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Images\1.jpg" />
