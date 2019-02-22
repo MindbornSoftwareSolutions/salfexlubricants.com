@@ -17,7 +17,7 @@ namespace slfexlubricants.com
                 cart = new List<object[]>();
                 Session["cart"] = cart;
             }
-            label_cartitems.Text = "(" + cart.Count + ")";
+            //label_cartitems.Text = "(" + cart.Count + ")";
         }
     }
 }

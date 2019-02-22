@@ -29,3 +29,21 @@ textarea {
         padding: 0;
     }
 }
+
+.card
+{
+    transition: 0.1s linear;
+    transform: scale(1) translate(0,0);
+}
+
+.card:hover
+{
+    background-color: #ffeecc !important;
+    transition: 0.3s linear;
+    transform: scale(1.05) translate(0,-5px);
+}
+
+.btn:hover
+{
+    transform: scale(1.05);
+}

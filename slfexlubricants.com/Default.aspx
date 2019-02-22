@@ -44,7 +44,7 @@
         </a>
     </div>
 
-    <div class="row">
+<%--    <div class="row">
         <div class="col-md-4">
             <h2><span style="background-color: #b01313; color: #ffffff; padding: 2px 10px 2px 10px; border-radius: 10px">20W40</span> 4 Stroke Motor Cycle Engine Oil</h2>
             <p>
@@ -63,7 +63,8 @@
                 Salfex Advanced 4T 20W/40+ is a blend of Mineral and Synthetic base Stock and Blend of Selective high performance Additives, which protects Engine, Transmission and wet clutch of new generation 4-Stroke two wheelers.
             </p>
         </div>
-    </div>
-    <div class="row"><a class="btn" style="background-color: #b01313; color: white" href="BrowseProducts.aspx">View More Products...</a></div>
+    </div>--%>
+    <br />
+    <div class="row"><a class="btn" style="background-color: #b01313; color: white" href="BrowseProducts.aspx">View All Products...</a></div>
 
 </asp:Content>
