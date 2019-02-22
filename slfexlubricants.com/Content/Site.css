@@ -47,3 +47,38 @@ textarea {
 {
     transform: scale(1.05);
 }
+
+.about-entry
+{
+    background-color: #fdfdfd;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-left: 2px solid #808080;
+    padding-left: 20px;
+    transition: 0.2s;
+}
+
+.about-entry:hover
+{
+    border-left: 8px solid red;
+    padding-left: 14px;
+    transition: 0.2s;
+}
+
+.about-entry .title
+{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.about-entry .detail
+{
+    font-size: 2rem;
+    font-weight:normal;
+}
+
+.about-title
+{
+    font-size: 4rem;
+    font-weight: bold;
+}

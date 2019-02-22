@@ -50,12 +50,12 @@
                     </button>
                     <a class="navbar-brand" runat="server" href="~/" style="color: white">Lubino Automotives Pvt. Ltd.</a>
                 </div>
-                <div class="navbar-collapse collapse">
+                <div class="navbar-collapse collapse" style="float: right">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/" style="color: white">Home</a></li>
                         <li><a runat="server" href="~/BrowseProducts" style="color: white">Products</a></li>
                         <li><a runat="server" href="~/About" style="color: white">About</a></li>
-                        <li><a runat="server" href="~/Contact" style="color: white">Contact</a></li>
+                        <%--<li><a runat="server" href="~/Contact" style="color: white">Contact</a></li>--%>
 <%--                        <li><a runat="server" href="~/Cart" style="color: white">Shopping Cart <span class="glyphicon glyphicon-shopping-cart"></span>
                             <asp:Label Text="(0)" ID="label_cartitems" runat="server" />
                         </a></li>--%>
